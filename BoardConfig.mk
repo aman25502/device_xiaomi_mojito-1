@@ -105,6 +105,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := mojito_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
 
+#DUP
+BUILD_BROKEN_DUP_RULES := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
