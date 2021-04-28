@@ -11,11 +11,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mojito device
 $(call inherit-product, device/xiaomi/mojito/device.mk)
 
-# Inherit some common PixelExperience stuff
+# Neverallow hack
+SELINUX_IGNORE_NEVERALLOWS := true
+
+# Inherit some common Extended stuff.
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Inherit GMS, Pixel Features, and Modules.
+-include vendor/google/gms/config.mk
+
+# Don't preoptimize prebuilts when building GMS.
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Pixel Features
+-include vendor/google/pixel/config.mk
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_mojito
