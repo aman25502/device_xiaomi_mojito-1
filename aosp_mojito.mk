@@ -29,6 +29,9 @@ DONT_DEXPREOPT_PREBUILTS := true
 # Pixel Features
 -include vendor/google/pixel/config.mk
 
+# Neverallow hack
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_mojito
 PRODUCT_DEVICE := mojito
