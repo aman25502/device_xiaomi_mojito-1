@@ -18,7 +18,7 @@ SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit GMS, Pixel Features, and Modules.
 -include vendor/google/gms/config.mk
