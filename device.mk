@@ -229,6 +229,11 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
+    
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/kernel:kernel \
+    $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img    
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
