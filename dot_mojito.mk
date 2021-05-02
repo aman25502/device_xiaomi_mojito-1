@@ -36,4 +36,5 @@ ifeq ($(GAPPS_BUILD),true)
     TARGET_GAPPS_ARCH := arm64
     IS_PHONE := true
     TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+    TARGET_SUPPORTS_GOOGLE_RECORDER := true
 endif    
